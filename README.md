@@ -1,12 +1,76 @@
-# React + Vite
+# Keeper App 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A minimal **React + Vite** project inspired by Google Keep.  It lets you add, manage, and delete notes with a clean and responsive UI.  
+Built using **React**, **Vite**, and styled with **Tailwind**.
 
-Currently, two official plugins are available:
+[![Live Demo](https://img.shields.io/badge/Live_Demo-0078D4?style=for-the-badge&logo=google-chrome&logoColor=white)](https://notes-app-react-villan7667.onrender.com)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
+---
+## Screenshot
+<img width="1892" height="884" alt="image" src="https://github.com/user-attachments/assets/9c33b232-7806-41f9-b0c4-e2cad94a12bf" />
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+
+## 🛠️ Installation & Setup
+1. Clone the repository  
+   ```bash
+   git clone https://github.com/your-username/keeper-app.git
+   cd keeper-app
+2. Install dependencies
+   ```   
+    npm install
+    npm run dev
+   ```
+
+---
+
+## ⚡ Features
+
+✏️ Add and delete notes easily
+
+🎨 Simple & clean UI
+
+⚡ Fast development with Vite
+
+🔄 Hot Module Replacement (HMR)
+
+📦 Tech Stack
+
+  React + Vite , Tailwind v4 ,node 
+
+  Framer Motion (for animations, optional)
+
+  ESLint (linting and code quality)
+
+---
+
+## 📂 Folder Structure
+```plaintext
+src/       
+ ├── components/     
+ │   ├── AddNoteForm.jsx
+ │   ├── Alert.jsx
+ │   ├── Header.jsx
+ │   ├── Hero.jsx
+ │   ├── NotesBoard.jsx
+ │   └── StickyNote.jsx
+ ├── hooks
+ |   └──  useLocalStorage.jsx
+ ├── App.jsx
+ ├── index.css
+ └── main.jsx
+```
+
+---
+
+
+Author: Villan@7667
+
+📜 License
+This project is licensed under the MIT License.
+
+**(For professional web or app development services, please reach out via my  [Portfolio](https://villan7667portfolio.netlify.app/) )**
+
+---
