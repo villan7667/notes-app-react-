@@ -1,5 +1,3 @@
-"use client"
-
 import React from "react"
 
 const useLocalStorage = (key, initialValue) => {
@@ -16,7 +14,7 @@ const useLocalStorage = (key, initialValue) => {
     try {
       window.localStorage.setItem(key, JSON.stringify(value))
     } catch {
-      // ignore write errors
+      
     }
   }, [key, value])
 

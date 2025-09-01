@@ -1,18 +1,16 @@
 /* Tailwind v4 */
 @import "tailwindcss";
 
-/* Theme: fonts */
 @theme inline {
   --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji",
     "Segoe UI Emoji";
 }
 
-/* Utility to use cursive font just for sticky notes titles/content */
 .font-cursive {
   font-family: "Dancing Script", cursive;
 }
 
-/* Animated multi-color aurora gradient background */
+
 .bg-aurora {
   background-image: linear-gradient(120deg, #38bdf8, #14b8a6, #10b981);
   background-size: 200% 200%;
@@ -30,7 +28,7 @@
   }
 }
 
-/* Subtle engraved background artwork: thin lines + dots */
+
 .bg-engrave {
   position: relative;
   isolation: isolate;
@@ -48,7 +46,6 @@
   z-index: -1;
 }
 
-/* Card float for sticky notes */
 @keyframes floaty {
   0% {
     transform: translateY(0px) rotate(var(--tw-rotate, 0));
@@ -64,7 +61,7 @@
   animation: floaty 5s ease-in-out infinite;
 }
 
-/* Small shake for alert */
+/* alert */
 @keyframes shake {
   0%,
   100% {
@@ -87,7 +84,7 @@
   animation: shake .35s ease-in-out;
 }
 
-/* Sticky note pin (using ::before via Tailwind + this helper) */
+/* Sticky note  */
 .has-pin {
   position: relative;
 }
@@ -104,7 +101,6 @@
   box-shadow: 0 2px 0 rgba(0, 0, 0, 0.25);
 }
 
-/* Clamp utility for note text */
 .note-content {
   display: -webkit-box;
   -webkit-line-clamp: 8;
@@ -112,7 +108,6 @@
   overflow: hidden;
 }
 
-/* Focus ring tune for accessibility */
 .focus-ring {
   @apply focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-400 focus-visible:ring-offset-2 focus-visible:ring-offset-white/10;
 }

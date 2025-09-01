@@ -1,5 +1,3 @@
-"use client"
-
 import { useMemo, useState, useCallback } from "react"
 import { FiTrash2 } from "react-icons/fi"
 import Header from "./components/Header.jsx"
