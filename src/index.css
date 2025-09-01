@@ -1,0 +1,118 @@
+/* Tailwind v4 */
+@import "tailwindcss";
+
+/* Theme: fonts */
+@theme inline {
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji",
+    "Segoe UI Emoji";
+}
+
+/* Utility to use cursive font just for sticky notes titles/content */
+.font-cursive {
+  font-family: "Dancing Script", cursive;
+}
+
+/* Animated multi-color aurora gradient background */
+.bg-aurora {
+  background-image: linear-gradient(120deg, #38bdf8, #14b8a6, #10b981);
+  background-size: 200% 200%;
+  animation: aurora-pan 12s ease-in-out infinite;
+}
+@keyframes aurora-pan {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Subtle engraved background artwork: thin lines + dots */
+.bg-engrave {
+  position: relative;
+  isolation: isolate;
+}
+.bg-engrave::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(ellipse at 20% 10%, rgba(255, 255, 255, 0.06), transparent 50%),
+    radial-gradient(ellipse at 80% 40%, rgba(0, 0, 0, 0.05), transparent 50%),
+    repeating-linear-gradient(90deg, rgba(0, 0, 0, 0.05) 0px, rgba(0, 0, 0, 0.05) 1px, transparent 1px, transparent 8px);
+  mix-blend-mode: overlay;
+  opacity: 0.45;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Card float for sticky notes */
+@keyframes floaty {
+  0% {
+    transform: translateY(0px) rotate(var(--tw-rotate, 0));
+  }
+  50% {
+    transform: translateY(-6px) rotate(var(--tw-rotate, 0));
+  }
+  100% {
+    transform: translateY(0px) rotate(var(--tw-rotate, 0));
+  }
+}
+.floaty {
+  animation: floaty 5s ease-in-out infinite;
+}
+
+/* Small shake for alert */
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(-4px);
+  }
+  40% {
+    transform: translateX(4px);
+  }
+  60% {
+    transform: translateX(-2px);
+  }
+  80% {
+    transform: translateX(2px);
+  }
+}
+.shake {
+  animation: shake .35s ease-in-out;
+}
+
+/* Sticky note pin (using ::before via Tailwind + this helper) */
+.has-pin {
+  position: relative;
+}
+.has-pin::before {
+  content: "";
+  position: absolute;
+  top: -0.35rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: .6rem;
+  height: .6rem;
+  border-radius: 9999px;
+  background: #f43f5e; /* rose-500 */
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.25);
+}
+
+/* Clamp utility for note text */
+.note-content {
+  display: -webkit-box;
+  -webkit-line-clamp: 8;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Focus ring tune for accessibility */
+.focus-ring {
+  @apply focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-400 focus-visible:ring-offset-2 focus-visible:ring-offset-white/10;
+}
