@@ -3,7 +3,7 @@
 A minimal **React + Vite** project inspired by Google Keep.  It lets you add, manage, and delete notes with a clean and responsive UI.  
 Built using **React**, **Vite**, and styled with **Tailwind**.
 
-[![Live Demo](https://img.shields.io/badge/Live_Demo-0078D4?style=for-the-badge&logo=google-chrome&logoColor=white)](https://your-live-demo-link.com)
+[![Live Demo](https://img.shields.io/badge/Live_Demo-0078D4?style=for-the-badge&logo=google-chrome&logoColor=white)](https://notes-app-react-villan7667.onrender.com)
 
 
 ---
